@@ -27,17 +27,17 @@ body {
   align-items: center;
   min-height: 100vh; }
 
-.dark-mode {
+.light-mode {
   background-color: var(--light-green) !important;
   border: 0.125rem solid var(--dark-blue) !important;
   color: var(--dark-gray) !important; }
-  .dark-mode h1 {
+  .light-mode h1 {
     color: var(--dark-blue) !important; }
-  .dark-mode .passwords {
+  .light-mode .passwords {
     border-top: 1px solid var(--dark-gray) !important; }
-  .dark-mode .btn-copy {
+  .light-mode .btn-copy {
     color: var(--light-gray) !important; }
-    .dark-mode .btn-copy:hover {
+    .light-mode .btn-copy:hover {
       color: var(--dark-blue) !important; }
 
 a {
@@ -46,7 +46,7 @@ a {
   top: calc(0% + 5px);
   cursor: pointer;
   right: calc(0% + 5px);
-  font-size: .125rem; }
+  font-size: 1rem; }
 
 .container {
   position: relative;

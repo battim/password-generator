@@ -41,15 +41,15 @@ const emptyPasswords = () => {
   }
 }
 
-const darkMode = () => {
+const lightMode = () => {
   let element = document.querySelector(".container"),
     switcher = document.querySelector(".switcher")
-  if (element.classList.contains("dark-mode")) {
-    switcher.textContent = "dark_mode"
+  if (element.classList.contains("light-mode")) {
+    switcher.classList.add("bi-sun-fill")
   } else {
-    switcher.textContent = "light_mode"
+    switcher.classList.remove("bi-sun-fill")
   }
-  element.classList.toggle("dark-mode")
+  element.classList.toggle("light-mode")
 }
 
 
