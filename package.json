@@ -1,0 +1,21 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass --include-path scss style.scss css/style.css",
+    "uglify-css": "uglifycss css/style.css > css/style.min.css",
+    "watch": "nodemon -e scss -x 'npm run css && npm run uglify-css'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "uglifycss": "^0.0.29"
+  }
+}
