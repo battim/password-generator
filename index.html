@@ -1,13 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="css/style.min.css" type="text/css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,300,1,0" />
     </head>
     <body>
         <div class="container">
-            <a onclick="darkMode()"><span class="material-symbols-outlined switcher">dark_mode</span></a>
+            <a onclick="darkMode()"><span class="material-symbols-rounded switcher">dark_mode</span></a>
             <div class="header">
                 <h1>Generate a <span>random password</span></h1>
                 <p>Never use an insecure password again.</p>
@@ -24,11 +25,11 @@
             <div class="passwords">
                 <div>
                     <textarea id="password1"></textarea>
-                    <small onclick="copyToClipboard(previousElementSibling.textContent)" id="copy-1" class="btn-small">Copy Password</small>
+                    <span onclick="copyToClipboard(previousElementSibling.textContent)" id="copy-1" class="btn-copy material-symbols-rounded">content_copy</span>
                 </div>
                 <div>
                     <textarea id="password2"></textarea>
-                    <small onclick="copyToClipboard(this.previousElementSibling.textContent)" id="copy-2" class="btn-small">Copy Password</small>
+                    <span onclick="copyToClipboard(this.previousElementSibling.textContent)" id="copy-2" class="btn-copy material-symbols-rounded">content_copy</span>
                 </div>
             </div>
         </div>

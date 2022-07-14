@@ -8,8 +8,6 @@
     "uglify-css": "uglifycss css/style.css > css/style.min.css",
     "watch": "nodemon -e scss -x 'npm run css && npm run uglify-css'"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^7.0.1",
