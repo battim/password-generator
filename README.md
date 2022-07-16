@@ -6,7 +6,7 @@ This is my stab at the Password Generator solo project from [scrimba.com's learn
 
 ## Screenshots
 
-![App Screenshot](./screenshot.jpg)
+![Screenshot](./screenshot.jpg) ![Lightmode](./screenshot-lightmode.jpg) ![Responsive](./screenshot-responsive.jpg)
 
 
 ## Run Locally
