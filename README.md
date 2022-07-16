@@ -36,6 +36,16 @@ Start the server
 ```
 
 
+## Built with
+
+- CSS custom properties
+- Flexbox
+- Bootstrap Icons
+- Express server
+- UglifyCss
+- TailWind Css
+
+
 ## Authors
 
 - [@battim](https://www.github.com/battim)

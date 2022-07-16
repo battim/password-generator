@@ -1,8 +1,7 @@
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_-+={[}],|:;<>.?/",
   tx = document.getElementsByTagName("textarea")
 
-let pass1El = document.getElementById("password1"),
-  pass2El = document.getElementById("password2")
+let pass1El = document.getElementById("password")
 
 function resizeTextarea() {
   for (let i = 0; i < tx.length; i++) {
@@ -16,34 +15,30 @@ function OnInput() {
   this.style.height = (this.scrollHeight) + "px";
 }
 
-function setValue(pass1, pass2) {
+function setValue(pass1) {
   pass1El.textContent = pass1
-  pass2El.textContent = pass2
 }
 
-const generatePasswords = (length, charset = characters) => {
+const generatePassword = (length, charset = characters) => {
   length = Number(document.getElementById("length-output").innerHTML)
-  let result = "",
-    result2 = ""
+  let result = ""
   for (i = 0; i < length; i++){
     result += charset.charAt(Math.floor(Math.random() * charset.length))
-    result2 += charset.charAt(Math.floor(Math.random() * charset.length))
   }
-  setValue(result, result2)
+  setValue(result)
   resizeTextarea()
 }
 
-const emptyPasswords = () => {
+const resetPassword = () => {
   pass1El.textContent = ""
-  pass2El.textContent = ""
   for (let i = 0; i < tx.length; i++) {
     tx[i].setAttribute("style", "height:40px;overflow-y:hidden;")
   }
 }
 
 const lightMode = () => {
-  let element = document.querySelector(".container"),
-    switcher = document.querySelector(".switcher")
+  let element = document.querySelector(".main"),
+    switcher = document.querySelector(".switch")
   if (element.classList.contains("light-mode")) {
     switcher.classList.add("bi-sun-fill")
   } else {
@@ -52,7 +47,24 @@ const lightMode = () => {
   element.classList.toggle("light-mode")
 }
 
+const copyToClipboard = () => {
+  navigator.clipboard.writeText(pass1El.textContent)
+}
 
-const copyToClipboard = (copyText) => {
-    navigator.clipboard.writeText(copyText)
+const changeIcon = (iconId) => {
+  copyToClipboard()
+  id = document.getElementById(iconId)
+  if (pass1El.textContent == "") {
+    id.classList.remove("bi-clipboard2", "bi-clipboard2-check")
+    id.classList.add("bi-clipboard2-x")
+    setTimeout(() => {
+      id.classList.add("bi-clipboard2")
+    }, 2000)
+  } else {
+    id.classList.add("bi-clipboard2-check")
+    id.classList.remove("bi-clipboard2", "bi-clipboard2-x")
+    setTimeout(() => {
+      id.classList.add("bi-clipboard2")
+    }, 2000)
+  }
 }

@@ -1,7 +1,4 @@
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap";
-.material-symbols-rounded {
-  font-size: 18px !important; }
-
 :root {
   --white: #fff;
   --light-green: #ecfdf5;
@@ -21,7 +18,6 @@
 body {
   margin: 0;
   background-color: var(--background);
-  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +36,10 @@ body {
     .light-mode .btn-copy:hover {
       color: var(--dark-blue) !important; }
 
-a {
+i {
+  font-size: 1rem; }
+
+.switch {
   display: block;
   position: absolute;
   top: calc(0% + 5px);
@@ -48,10 +47,10 @@ a {
   right: calc(0% + 5px);
   font-size: 1rem; }
 
-.container {
+.main {
   position: relative;
-  max-width: 550px;
-  min-height: 550px;
+  min-height: 400px;
+  max-width: 540px;
   background-color: var(--dark-blue);
   border: 2px solid var(--light-green);
   border-radius: 10px;
@@ -59,20 +58,20 @@ a {
   font-size: 1.25rem;
   padding: 3.125rem;
   font-weight: 400;
+  font-family: "Inter", sans-serif;
   font-style: normal;
-  display: flex;
-  flex-flow: wrap;
-  align-content: space-evenly;
-  justify-content: space-evenly; }
+  letter-spacing: normal; }
 
-h1 {
-  color: var(--white);
-  font-family: "Karla", sans-serif;
-  font-size: 2.5rem;
-  margin-top: 0; }
-  h1 span {
-    display: inline-flex;
-    color: var(--text-green); }
+.header {
+  border-bottom: 1px solid var(--dark-gray); }
+  .header h1 {
+    color: var(--white);
+    font-family: "Karla", sans-serif;
+    font-size: 2.5rem;
+    margin-top: 0; }
+    .header h1 span {
+      display: inline-flex;
+      color: var(--text-green); }
 
 p {
   margin-bottom: 0;
@@ -87,24 +86,10 @@ p {
   .passwords div {
     display: flex;
     align-items: start; }
-
-.buttons {
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-around; }
-
-textarea {
-  background-color: var(--blue);
-  border: 1px solid var(--dark-gray);
-  border-radius: 6px 0 6px 6px;
-  font-size: 1rem;
-  padding: .65rem;
-  height: 40px;
-  margin-top: 2rem;
-  word-break: break-all;
-  color: var(--text-green);
-  max-width: 185px;
-  position: relative; }
+    .passwords div:first-child {
+      justify-content: start; }
+    .passwords div:last-child {
+      justify-content: end; }
 
 button {
   background-color: var(--btn-green);
@@ -118,13 +103,26 @@ button {
   cursor: pointer;
   min-width: 185px; }
 
+textarea {
+  background-color: var(--blue);
+  border: 1px solid var(--dark-gray);
+  border-radius: 6px 0 6px 6px;
+  font-size: 1rem;
+  padding: .65rem;
+  height: 40px;
+  margin-top: 2rem;
+  word-break: break-all;
+  color: var(--text-green);
+  position: relative; }
+
 .btn-copy {
   cursor: pointer;
   margin-top: 2rem;
   background-color: var(--blue);
   border: 1px solid var(--dark-gray);
   border-left: 0;
-  padding: 5px;
+  padding: 3px 5px;
+  height: 32px;
   border-radius: 0px 6px 6px 0px; }
   .btn-copy:hover {
     background-color: var(--light-gray);
