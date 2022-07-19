@@ -7,7 +7,7 @@
     "css": "node-sass --include-path scss src/styles.scss src/css/styles.css",
     "uglify-css": "uglifycss src/css/styles.css > dist/css/styles.min.css",
     "watch": "nodemon -e scss -x 'npm run css && npm run uglify-css'",
-    "start": "npm run watch & node app.js"
+    "start": "npm run watch & node index.js"
   },
   "license": "ISC",
   "devDependencies": {

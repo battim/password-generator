@@ -13,30 +13,41 @@
         <div class="row header">
             <div class="col"><h1>Generate a <span>random password</span></h1></div>
         </div>
-        <div class="row number-line my-3 pt-3">
-            <div class="col col-sm-6 text-sm-end">
-                <label for="password-length">Password length:</label>
+        <div class="row options">
+            <div class="col">
+                <div class="btn-group mt-4" role="group" aria-label="Toggle button group for password options">
+                    <input type="checkbox" class="btn-check" name="btncheck" id="uppercase" autocomplete="off">
+                    <label data-js-selector="checkbox" for="uppercase" class="btn btn-outline">A-Z</label>
+                    <input type="checkbox" class="btn-check" name="btncheck" id="lowercase" autocomplete="off" checked>
+                    <label data-js-selector="checkbox" for="lowercase" class="btn btn-outline">a-z</label>
+                    <input type="checkbox" class="btn-check" name="btncheck" id="numbers" autocomplete="off">
+                    <label data-js-selector="checkbox" for="numbers" class="btn btn-outline">0-9</label>
+                    <input type="checkbox" class="btn-check" name="btncheck" id="symbols" autocomplete="off">
+                    <label data-js-selector="checkbox" for="symbols" class="btn btn-outline">!@#$%^&*</label>
+                </div>
             </div>
-            <div class="col col-sm-6 text-sm-start">
-                <input type="range" min="8" max="128" value="14" id="password-length" onchange="document.getElementById('length-output').innerHTML = this.value">
+        </div>
+        <div class="row number-line my-3">
+            <div>
+                <label for="password-length">Length:</label>
+            </div>
+            <div>
+                <input data-js-selector="slider" type="range" min="8" max="128" value="14" id="length" onchange="document.getElementById('length-output').innerHTML = this.value">
                 <output id="length-output">14</output>
             </div>
         </div>
         <div class="row buttons g-0">
-            <div class="col col-sm-6 mt-2 mt-sm-0">
-                <button onclick="generatePassword()">Generate</button>
-            </div>
-            <div class="col col-sm-6 mt-2 mt-sm-0">
-                <button onclick="resetPassword()">Reset</button>
+            <div class="col mt-2 mt-sm-0">
+                <button data-js-selector="button" id="create-password">Generate</button>
             </div>
         </div>
         <div class="row password">
             <div class="col position-relative">
-                <textarea readonly name="password" id="password"></textarea>
-                <i onclick="changeIcon(this.id);" id="copy" class="btn-copy bi bi-clipboard2 bi-clipboard2-check position-absolute"></i>
+                <div id="password"></div>
+                <i data-js-selector="copy" onclick="changeIcon(this.id);" id="copy" class="d-none btn-copy bi bi-clipboard2 bi-clipboard2-check position-absolute"></i>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="src/index.js"></script>
+    <script type="text/javascript" src="src/app.js"></script>
 </body>
 </html>
