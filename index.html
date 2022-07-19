@@ -15,7 +15,7 @@
         </div>
         <div class="row options">
             <div class="col">
-                <div class="btn-group mt-4" role="group" aria-label="Toggle button group for password options">
+                <div class="mt-4" role="group" aria-label="Toggle button group for password options">
                     <input type="checkbox" class="btn-check" name="btncheck" id="uppercase" autocomplete="off">
                     <label data-js-selector="checkbox" for="uppercase" class="btn btn-outline">A-Z</label>
                     <input type="checkbox" class="btn-check" name="btncheck" id="lowercase" autocomplete="off" checked>
@@ -32,7 +32,7 @@
                 <label for="password-length">Length:</label>
             </div>
             <div>
-                <input data-js-selector="slider" type="range" min="8" max="128" value="14" id="length" onchange="document.getElementById('length-output').innerHTML = this.value">
+                <input data-js-selector="slider" type="range" min="8" max="128" value="14" id="length">
                 <output id="length-output">14</output>
             </div>
         </div>

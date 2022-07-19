@@ -69,27 +69,6 @@ const generatePassword = () => {
 
 }
 
-// function setValue(pass1) {
-//   selectors.password.innerHTML = pass1
-// }
-
-// const generatePassword = (length, charset = options.charUpper) => {
-//   length = Number(document.getElementById("length-output").innerHTML)
-//   let result = ""
-//   for (i = 0; i < length; i++){
-//     result += charset.charAt(Math.floor(Math.random() * charset.length))
-//   }
-//   setValue(result)
-//   // resizeTextarea()
-// }
-
-// const resetPassword = () => {
-//   selectors.password.textContent = ""
-//   // for (let i = 0; i < tx.length; i++) {
-//   //   tx[i].setAttribute("style", "height:40px;overflow-y:hidden;")
-//   // }
-// }
-
 const lightMode = () => {
   let element = document.querySelector(".main"),
     switcher = document.querySelector(".switch")
@@ -102,7 +81,6 @@ const lightMode = () => {
 }
 
 const changeIcon = (iconId) => {
-  // copyToClipboard()
   id = document.getElementById(iconId)
   if (selectors.password.textContent == "") {
     id.classList.remove("bi-clipboard2", "bi-clipboard2-check")
