@@ -123,6 +123,9 @@ p {
   border: 1px solid var(--bright-green);
   color: var(--white); }
 
+.number-line label {
+  font-size: 1rem; }
+
 .number-line input[type=range] {
   height: 18px;
   -webkit-appearance: none;
