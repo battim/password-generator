@@ -43,7 +43,7 @@ Start the server
 - Bootstrap Icons
 - Express server
 - UglifyCss
-- TailWind Css
+- Bootstrap
 
 
 ## Authors
