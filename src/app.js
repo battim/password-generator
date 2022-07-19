@@ -47,6 +47,8 @@ document.querySelector(".main").addEventListener("click", event => {
 
 const generatePassword = () => {
   copyIcon.classList.remove("d-none")
+  selectors.password.classList.remove("border-0")
+  
   const chars = {
     lowercase: "abcdefghijklmnopqrstuvwxyz",
     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
